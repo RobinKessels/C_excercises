@@ -2,7 +2,7 @@
 #include <string.h>
 #define STRING_LIMIT 1000
 
-void reverse(char string[]);
+void reverse(char str[]);
 void reverse_by_line();
 void append(char* s, char c);
 
@@ -15,20 +15,20 @@ int main()
   reverse_by_line();
 }
 
-void reverse(char string[])
+void reverse(char str[])
 {
   long len;
-  char reversed_string[STRING_LIMIT];
-  len = strlen(string)-1; // characters before the null terminator '\0'
+  char reversed_str[STRING_LIMIT];
+  len = strlen(str)-1; // characters before the null terminator '\0'
 
   for(int i = len; i >= 0; --i)
   {
-    reversed_string[len - i] = string[i];
+    reversed_str[len - i] = str[i];
   }
 
   for(int i = 0; i <= len; ++i)
   {
-    string[i] = reversed_string[i];
+    str[i] = reversed_str[i];
   }
 }
 
@@ -51,9 +51,9 @@ void reverse_by_line()
   printf("%s\n", paragraph);
 }
 
-void append(char* s, char c)
+void append(char* str, char c)
 {
-        int len = strlen(s);
-        s[len] = c;
-        s[len+1] = '\0';
+        int len = strlen(str);
+        str[len] = c;
+        str[len+1] = '\0';
 }
