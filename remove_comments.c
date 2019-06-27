@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #define ARR_SIZE 1000
-#define COMMENT_LINE 1
-#define COMMENT_BLOCK 2
-#define CODE 0
+
 /*
   Excercise 1-23
   Write a program to remove all comments from a C program.
@@ -23,8 +21,8 @@ int main()
 void remove_comments()
 {
   char code[ARR_SIZE];
-  code[0] = '\0';
   int c, nextchar;
+  code[0] = '\0';
   nextchar = '0';
   while((c = getchar()) != EOF)
   {
@@ -91,10 +89,3 @@ void append(char* str, char c)
   str[len] = c;
   str[len+1] = '\0';
 }
-
-/*
-  Excercise 1-24
-  Write a program to check a C program for rudimentary syntax errors like
-  unbalanced parentheses, brackets and braces. Don't forget about quotes, both
-  single and double, escape sequences, and comments.
-*/
